@@ -2,7 +2,7 @@
 
 # FIRMWARE
 
-# sudo apt install isenkram \
+# apt install -y isenkram \
 #     isenkram-autoinstall-firmware \
 #     firmware-amd-graphics \
 #     libgl1-mesa-dri \
@@ -13,9 +13,7 @@
 
 # APPLICATIONS
 
-sudo apt purge firefox*;
-
-sudo apt install \
+apt -y install \
     alacritty \
     neovim \
     tmux \
@@ -54,6 +52,10 @@ sudo apt install \
     imagemagick \
     nautilus-image-converter;
 
+apt purge firefox*;
+apt autoremove;
+
+
 
 # FLATPAK APPS
 
@@ -64,13 +66,11 @@ flatpak install -y flathub \
     com.github.tchx84.Flatseal \
     org.libreoffice.LibreOffice \
     org.onlyoffice.desktopeditors \
-    de.haeckerfelix.Shortwave \
     org.gabmus.whatip \
     com.felipekinoshita.Wildcard \
     \
     org.chromium.Chromium \
     org.mozilla.firefox \
-    org.gabmus.giara \
     org.qbittorrent.qBittorrent \
     org.telegram.desktop \
     org.mozilla.Thunderbird \
@@ -90,12 +90,10 @@ flatpak install -y flathub \
     org.mapeditor.Tiled \
     \
     com.calibre_ebook.calibre \
-    info.febvre.Komikku \
     com.sigil_ebook.Sigil \
     com.yacreader.YACReader \
     \
     hu.kramo.Cartridges \
-    net.lutris.Lutris \
     net.minetest.Minetest \
     org.openjkdf2.OpenJKDF2 \
     net.pcsx2.PCSX2 \
@@ -107,4 +105,4 @@ flatpak install -y flathub \
 
 # LOCALES
 
-sudo dpkg-reconfigure locales;
+dpkg-reconfigure locales;
